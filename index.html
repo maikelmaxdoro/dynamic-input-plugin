@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="section" id="dynamic">
+			<div class="section-item half-item">
+				<label>Achternaam</label>
+				<input type="text" name="string-getuigeAchternaam"/>
+			</div>
+			<div class="section-item half-item">
+				<label>Voorvoegsel</label>
+				<input type="text" name="string-getuigeVoorvoegsel"/>
+			</div>
+			<div class="section-item half-item">
+				<label>Voorna(a)m(en)</label>
+				<input type="text" name="string-getuigeVoornamen"/>
+			</div>
+			<div class="section-item half-item">
+				<label>Geslacht</label>
+				<label>
+					<input type="radio" name="string-getuigeGeslacht" value="man">
+					<span>Man</span>
+				</label>
+				<label>
+					<input type="radio" name="string-getuigeGeslacht" value="vrouw">
+					<span>Vrouw</span>
+				</label>
+			</div>
+			<div class="section-item half-item">
+				<label>Adres</label>
+				<input type="text" name="string-getuigeAdres"/>
+			</div>
+			<div class="section-item half-item">
+				<label>Plaats</label>
+				<input type="text" name="string-getuigePlaats"/>
+			</div>
+		</div>
+		<input type="hidden" data-dynamic-json />
+		<button onclick="$('#dynamic').dynamicInput('save');">Save</button>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.dynamicinput.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#dynamic').dynamicInput();
+	});
+</script>
+</body>
+</html>
